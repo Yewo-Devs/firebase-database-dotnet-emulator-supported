@@ -20,7 +20,15 @@ namespace Firebase.Database.Query
             : base(parent, client)
         {
             this.parameterFactory = parameterFactory;
-            this.separator = (this.Parent is ChildQuery) ? "?" : "&";
+
+            if (string.IsNullOrEmpty(client.ns))
+            {
+				this.separator = (this.Parent is ChildQuery) ? "?" : "&";
+
+                return;
+			}
+
+            this.separator = "&";
         }
 
         /// <summary>
