@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <PackageId>FirebaseDatabase.EmulatorSupported.net</PackageId>
-    <PackageVersion>4.2.0</PackageVersion>
+    <PackageVersion>4.2.1</PackageVersion>
     <Authors>Yewo Theu</Authors>
     <Description>A fork of the Firebase.net package by StepUp Labs which supports the use of firebase emulator for locally hosted realtime database.</Description>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
@@ -13,13 +13,14 @@
     <Copyright>Yewo Theu, 2024.</Copyright>
     <PackageTags>Firebase Database Realtime</PackageTags>
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
-    <IncludeSymbols>true</IncludeSymbols>
+    <IncludeSymbols>False</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     <DocumentationFile>bin\$(Configuration)\netstandard2.0\Firebase.xml</DocumentationFile>
     <DebugType>portable</DebugType>
     <DebugSymbols>true</DebugSymbols>
     <AssemblyVersion>4.2.1</AssemblyVersion>
     <FileVersion>4.2.1</FileVersion>
+    <Version>4.2.1</Version>
   </PropertyGroup>
 
   <ItemGroup>
