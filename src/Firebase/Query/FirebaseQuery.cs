@@ -195,7 +195,12 @@ namespace Firebase.Database.Query
                 return this.WithAuth(token).BuildUrl(null);
             }
 
-            return this.BuildUrl(null);
+            string url = this.BuildUrl(null);
+
+            if (url.Contains(".json"))
+                return url;
+
+            return this.BuildUrl(null) + $".json?ns={this.Client.ns}";
         }
 
         /// <summary>
@@ -303,7 +308,7 @@ namespace Firebase.Database.Query
 
         private string BuildUrl(FirebaseQuery child)
         {
-            var url = this.BuildUrlSegment(child);
+            var url = this.BuildUrlSegment(child == null? this: child);
 
             if (this.Parent != null)
             {
